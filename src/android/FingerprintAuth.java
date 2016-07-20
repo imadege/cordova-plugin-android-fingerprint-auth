@@ -368,6 +368,7 @@ public class FingerprintAuth extends CordovaPlugin {
 			setPluginResultError("IOException");
 		}
 	}
+
 	public static void onAuthenticated(boolean withFingerprint) {
 		mPluginResult = new PluginResult(PluginResult.Status.OK);
 		JSONObject resultJson = new JSONObject();
@@ -395,6 +396,19 @@ public class FingerprintAuth extends CordovaPlugin {
 		mCallbackContext.sendPluginResult(mPluginResult);
 	}
 
+	public static void onUsePasscode(boolean withFingerprint) {
+		mPluginResult = new PluginResult(PluginResult.Status.OK);
+		JSONObject resultJson = new JSONObject();
+		try{
+			resultJson.put("use_passcode", true);
+		} catch (JSONException e) {
+			Log.e(TAG, "Failed to set resultJson key value pair: " + e.getMessage());
+		}
+
+		mCallbackContext.success(resultJson);
+		mCallbackContext.sendPluginResult(mPluginResult);
+
+	}
 	/**
 	 * Tries to encrypt some data with the generated key in {@link #createKey} which is
 	 * only works if the user has just authenticated via fingerprint.

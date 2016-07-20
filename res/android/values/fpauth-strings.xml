@@ -17,9 +17,10 @@
 <resources>
     <string name="cancel">Cancel</string>
     <string name="use_backup">Use backup</string>
-    <string name="fingerprint_auth_dialog_title">Fingerprint Authentication</string>
+    <string name="passcode">Use Passcode</string>
+    <string name="fingerprint_auth_dialog_title">Authenticate fingerprint to unlock</string>
     <string name="ok">Ok</string>
-    <string name="fingerprint_description">Confirm fingerprint to continue</string>
+    <string name="fingerprint_description">Confirm fingerprint to logon to pesamax</string>
     <string name="fingerprint_hint">Touch sensor</string>
     <string name="fingerprint_not_recognized">Fingerprint not recognized. Try again.</string>
     <string name="fingerprint_success">Fingerprint recognized</string>
